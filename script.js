@@ -31,7 +31,7 @@ fetch('https://kitsu.io/api/edge/trending/anime')
             </div>
             <div class="flip-card-back">
               <h2>${titles.en}</h2>
-              <p>Synopsis</p>
+              <p>Descripción</p>
               <p>${synopsis}</p>
             </div>
           </div>
