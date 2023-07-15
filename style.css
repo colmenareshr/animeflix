@@ -76,7 +76,7 @@ h3 {
 }
 
 .flip-card-back {
-  padding: 2rem
+  padding: 2rem;
   border-radius: 10px;
   transform: rotateY(180deg);
   border: solid 2px black;
