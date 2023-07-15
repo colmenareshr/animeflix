@@ -16,7 +16,7 @@ fetch('https://kitsu.io/api/edge/trending/anime')
       { name: 'Laranja', en: 'orange', color: '#f2ae72', textColor: '#000000' },
       { name: 'Roxo', en: 'purple', color: '#8E44AD', textColor: '#ffffff' },
       { name: 'Rosa', en: 'pink', color: '#f9d5e5', textColor: '#000000' },
-      { name: 'Cinza', en: 'grey', color: '#d6d4e0', textColor: '#000000' },
+      { name: 'Cinza', en: 'gray', color: '#d6d4e0', textColor: '#000000' },
       { name: 'Amarelo', en: 'yellow', color: '#ffcc5c', textColor: '#000000' },
       { name: 'Marrom', en: 'brown', color: '#a2836e', textColor: '#ffffff' },
     ];
