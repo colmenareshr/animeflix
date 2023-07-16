@@ -27,28 +27,30 @@ fetch('https://kitsu.io/api/edge/trending/anime')
 
       const { posterImage, titles, synopsis } = anime.attributes;
       //Mostramos un número de palabras para la sinopsis
-      const maxWords = 60;
+      const maxWords = 40;
       const shortSynopsis = synopsis.split(' ').slice(0, maxWords).join(' ');
       //Fin//
+      
 
+      const colorNamePt = colors[index].name
       //mostrar el título de colores en capitalize
-      const colorNameEn = colors[index % colors.length].en;
+      const colorNameEn = colors[index].en;
       const titleNameColorEn =
         colorNameEn.charAt(0).toUpperCase() + colorNameEn.slice(1);
 
-      const backgroundTextColor = colors[index % colors.length];
+      const colorsName = colors[index % colors.length];
 
       animeCard.innerHTML = `
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="${posterImage.large}" alt="Poster de ${titles.en}" class="border" style="padding: 12px; width: 80%">
-            <h2>${titleNameColorEn}</h2>
+            <img src="${posterImage.large}" alt="Poster de ${titles.en_jp}" class="border" style="padding: 12px; width: 80%">
+            <h2>${colorNamePt}</h2>
           </div>
-          <div class="flip-card-back" style="background-color: ${backgroundTextColor.color}; color:${backgroundTextColor.textColor}" >
-            <h3 style= "color: ${backgroundTextColor.textColor}; font-size: 1.3rem" > ${titles.en} </h3>
+          <div class="flip-card-back" style="background-color: ${colorsName.color}; color:${colorsName.textColor}" >
+            <h3 style= "color: ${colorsName.textColor}; font-size: 1.3rem" > ${titles.en_jp} </h3>
             <p> ${shortSynopsis} </p>
             <a href="anime.html ">Mais informação</a>
-            <h4> ${backgroundTextColor.name} </h4>
+            <h4> ${titleNameColorEn} </h4>
           </div>
         </div>
       `;
