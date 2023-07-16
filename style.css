@@ -29,7 +29,6 @@ h1 {
   background-image: url('./IMG/animeflix-hero-section.jpg');
   background-size: cover;
   background-position: center;
-  
 }
 
 .hero-overlay {
@@ -42,7 +41,7 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.6); /* Opacidad ajustable (0 a 1) */
 }
 
@@ -54,7 +53,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: .5rem; 
+  gap: 0.5rem;
   text-wrap: balance;
 }
 
@@ -62,8 +61,8 @@ h1 {
   padding: 10px 20px;
   font-family: inherit;
   font-size: 1.2rem;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #ff8000;
+  color: #181818;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -73,7 +72,7 @@ h1 {
 .cards-container {
   width: 100%;
   height: auto;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -162,6 +161,7 @@ h1 {
   padding: 0.5rem 1rem 0.5rem 1rem;
   font-family: inherit;
   background-color: #ff8000;
+  color: #181818;
   border-radius: 20px;
   border: 1px solid #102d44;
 
@@ -198,7 +198,7 @@ footer {
   height: 150px;
 }
 
-footer span{
+footer span {
   display: flex;
   justify-content: center;
 }
