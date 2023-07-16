@@ -148,7 +148,12 @@ footer {
   height: 150px;
 }
 
-span {
+footer span{
   display: flex;
   justify-content: center;
+}
+
+footer div a {
+  position: relative;
+  margin-left: 10px;
 }
