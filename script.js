@@ -25,7 +25,8 @@ fetch('https://kitsu.io/api/edge/trending/anime')
       const animeCard = document.createElement('div');
       animeCard.classList.add('flip-card');
 
-      const { posterImage, titles, synopsis, coverImage } = anime.attributes;
+      const { posterImage, titles, synopsis, coverImage, popularityRank } =
+        anime.attributes;
       //Mostramos un número de palabras para la sinopsis
       const maxWords = 40;
       const shortSynopsis = synopsis.split(' ').slice(0, maxWords).join(' ');
@@ -49,8 +50,8 @@ fetch('https://kitsu.io/api/edge/trending/anime')
             <div class="flip-card-back-info">
                 <img src="${coverImage.large}" alt="Imagen da Anime ${titles.en_jp}" class="round-image" >
               <h3 style= "color: ${colorsName.textColor}; font-size: 1.3rem" > ${titles.en_jp} </h3>
-            </div>
-            <a href="anime.html ">Mais informação</a>
+              </div>
+            <a href="anime.html ">Saiba Mais</a>
             <h4> ${titleNameColorEn} </h4>
           </div>
         </div>
