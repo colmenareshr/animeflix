@@ -25,14 +25,13 @@ fetch('https://kitsu.io/api/edge/trending/anime')
       const animeCard = document.createElement('div');
       animeCard.classList.add('flip-card');
 
-      const { posterImage, titles, synopsis } = anime.attributes;
+      const { posterImage, titles, synopsis, coverImage } = anime.attributes;
       //Mostramos un número de palabras para la sinopsis
       const maxWords = 40;
       const shortSynopsis = synopsis.split(' ').slice(0, maxWords).join(' ');
       //Fin//
-      
 
-      const colorNamePt = colors[index].name
+      const colorNamePt = colors[index].name;
       //mostrar el título de colores en capitalize
       const colorNameEn = colors[index].en;
       const titleNameColorEn =
@@ -47,8 +46,10 @@ fetch('https://kitsu.io/api/edge/trending/anime')
             <h2>${colorNamePt}</h2>
           </div>
           <div class="flip-card-back" style="background-color: ${colorsName.color}; color:${colorsName.textColor}" >
-            <h3 style= "color: ${colorsName.textColor}; font-size: 1.3rem" > ${titles.en_jp} </h3>
-            <p> ${shortSynopsis} </p>
+            <div class="flip-card-back-info">
+                <img src="${coverImage.large}" alt="Imagen da Anime ${titles.en_jp}" class="round-image" >
+              <h3 style= "color: ${colorsName.textColor}; font-size: 1.3rem" > ${titles.en_jp} </h3>
+            </div>
             <a href="anime.html ">Mais informação</a>
             <h4> ${titleNameColorEn} </h4>
           </div>
