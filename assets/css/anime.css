@@ -1,0 +1,98 @@
+.anime__hero-section {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.anime-details-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.anime-details-container button {
+  width: 200px;
+  margin: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #ff8000;
+  cursor: pointer;
+}
+
+.poster-column {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.poster-column img {
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.poster-column span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-column {
+  width: 100%;
+  padding: 0 20px 0 10px;
+}
+
+.info-column h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info-column span {
+  font-style: italic;
+  font-weight: 600;
+  color: #138a72;
+}
+
+.info-column p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .anime-details-container {
+    flex-direction: column;
+  }
+}
+
+/* Estilos para dispositivos de escritorio */
+@media  (min-width: 769px) {
+  .anime-details-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+  }
+
+  /* Tamaño máximo de la columna de póster */
+  .poster-column {
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  /* Tamaño de la imagen del póster */
+  .poster-column img {
+    width: 100%;
+    height: auto; 
+    border-radius: 20px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+}
