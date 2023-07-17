@@ -26,7 +26,7 @@ h1 {
 .hero-container {
   position: relative;
   min-height: 90vh;
-  background-image: url('./IMG/animeflix-hero-section.jpg');
+  background-image: url('../../assets/img/animeflix-hero-section.jpg');
   background-size: cover;
   background-position: center;
 }
