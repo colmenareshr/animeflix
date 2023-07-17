@@ -1,4 +1,4 @@
-import { fetchAnimeData } from './api.js';
+import { fetchAnimeData, fetchAnimeById } from './api.js';
 
 const colors = [
   { name: 'Vermelho', en: 'red', color: '#c83349', textColor: '#ffffff' },
@@ -15,7 +15,9 @@ const colors = [
 
 let colorIndex = 0;
 function createAnimeCard(anime) {
-  const { posterImage, titles, coverImage } = anime.attributes;
+  const {posterImage, titles, coverImage } = anime.attributes;
+  const animeId = anime.id;
+  
   const {
     name: colorNamePt,
     en: colorNameEn,
@@ -27,6 +29,7 @@ function createAnimeCard(anime) {
 
   const animeCard = document.createElement('div');
   animeCard.classList.add('flip-card');
+  animeCard.dataset.animeId = animeId;
   animeCard.innerHTML = `
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -35,7 +38,7 @@ function createAnimeCard(anime) {
   }" class="border" style="padding: 12px; width: 80%">
             <h2>${colorNamePt}</h2>
           </div>
-          <div class="flip-card-back" style="background-color: ${color}; color:${textColor}" >
+          <div class="flip-card-back anime-card" style="background-color: ${color}; color:${textColor}" >
             <div class="flip-card-back-info">
               <img src="${coverImage.large}" alt="Imagen da Anime ${
     titles.en_jp
@@ -44,7 +47,7 @@ function createAnimeCard(anime) {
     titles.en_jp
   } </h3>
             </div>
-            <a href="anime.html">Saiba Mais</a>
+            <a class="anime-link" href="anime.html?id=${animeId}">Saiba Mais</a>
             <h4>${
               colorNameEn.charAt(0).toUpperCase() + colorNameEn.slice(1)
             }</h4>
