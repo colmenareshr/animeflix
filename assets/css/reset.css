@@ -13,13 +13,13 @@
 }
 
 html {
-  font-family: 'Roboto', 'sans-serif';
 }
 
-body {
+body, html {
+  font-family: 'Roboto', 'sans-serif';
+  height: 100vh;
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
-  background-color: #f4f4f4;
 }
 
 a {
