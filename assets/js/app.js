@@ -15,8 +15,7 @@ const colors = [
 
 let colorIndex = 0;
 function createAnimeCard(anime) {
-  const { posterImage, titles, synopsis, coverImage } = anime.attributes;
-  // const colorIndex = Math.floor(Math.random() * colors.length);
+  const { posterImage, titles, coverImage } = anime.attributes;
   const {
     name: colorNamePt,
     en: colorNameEn,
